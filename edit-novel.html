@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Judul -->
+    <title>Edit Novel | Cherryta - "Cerita yang indah, adalah cerita dari hati"</title>
+
+    <!-- Link framework -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="vendor/owl-carousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/owl-carousel/css/owl.theme.default.min.css">
+
+    <!-- Link css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Link font -->
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="vendor/font-awesome/css/all.min.css" />
+    <!-- Quicksand -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon-cherryta.png" />
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <!-- Navbar Normal -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
+        <a class="navbar-brand" href="index.html">
+            <div class="d-flex flex-row">
+                <div class="mr-2">
+                    <img class="p-0 m-0" src="img/logo-cherryta.png" alt="logo cherryta" />
+                </div>
+            </div>
+        </a>
+        <div class="cNavnormal ml-auto">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="webnovel.html">Web Novel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cerpen.html">Cerpen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="puisi.html">Puisi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pantun.html">Pantun</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item tambah-karya">
+                    <!-- <a class="nav-link" href="#">
+                        <button class="btn btn-danger">
+                            <i class="fas fa-plus-circle mr-2"></i>Tambah Karya
+                        </button>
+                    </a> -->
+                    <div class="dropdown show mt-1">
+                        <a class="btn btn-danger dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-plus-circle mr-2"></i>Tambah Karya
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="tambah-novel.html">Novel</a>
+                            <a class="dropdown-item" href="tambah-nonnovel.html">Non Novel</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown akun ml-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="mr-2" src="img/pp1.jpg">
+                        Fusuyu Fuyusu
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="profil.html">
+                            <i class="fas fa-user-circle mr-2"></i>Profil
+                        </a>
+                        <a class="dropdown-item" href="karyaku.html">
+                            <i class="fas fa-book mr-2"></i>Karyaku
+                        </a>
+                        <a class="dropdown-item" href="akun.html">
+                            <i class="fas fa-user-cog mr-2"></i>Akun
+                        </a>
+                        <a class="dropdown-item" href="logout.html">
+                            <i class="fas fa-sign-out-alt mr-2"></i>Keluar
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="dropdown show ml-auto add">
+            <a class="btn btn-danger dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-plus-circle"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="tambah-novel.html">Novel</a>
+                <a class="dropdown-item" href="tambah-nonnovel.html">Non Novel</a>
+            </div>
+        </div>
+        <button class="btn search" onclick="openSearch()">
+            <i class="fas fa-search"></i>
+        </button>
+        <button class="btn hamburger" onclick="openNav()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Navbar Overlay -->
+    <nav>
+        <div id="cNavover" class="cOverlay">
+            <div class="cNavhead d-flex flex-row py-3">
+                <div class="px-3">
+                    <img class="p-0 m-0" src="img/logo-cherryta.png" alt="logo cherryta" />
+                </div>
+                <div class="ml-auto align-self-center px-3">
+                    <button class="btn close" onclick="closeNav()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="cNavcont">
+                <a class="btn" href="index.html">Beranda</a>
+                <a class="btn" href="webnovel.html">Web Novel</a>
+                <a class="btn" href="cerpen.html">Cerpen</a>
+                <a class="btn" href="puisi.html">Puisi</a>
+                <a class="btn" href="pantun.html">Pantun</a>
+                <a class="btn" href="login.html">Login</a>
+                <button class="btn dropdown-toggle shadow-none mt-1" type="button" data-toggle="collapse" data-target="#collapseone" aria-expanded="false" aria-controls="collapseExample"><img class="mr-2" src="img/pp1.jpg">Fusuyu Fuyusu</button>
+                <div class="collapse" id="collapseone" data-parent=".cNavcont">
+                    <div class="card card-body">
+                        <a class="btn" href="profil.html">
+                            <i class="fas fa-user-circle mr-2"></i>Profil
+                        </a>
+                        <a class="btn" href="karyaku">
+                            <i class="fas fa-book mr-2"></i>Karyaku
+                        </a>
+                        <a class="btn" href="akun.html">
+                            <i class="fas fa-user-cog mr-2"></i>Akun
+                        </a>
+                        <a class="btn" href="logout.html">
+                            <i class="fas fa-sign-out-alt mr-2"></i>Keluar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search -->
+    <section class="cSearch">
+        <div id="cSearch" class="cOverlay">
+            <div class="position-relative">
+                <button class="btn closeSearch" onclick="closeSearch()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="cForm">
+                    <form action="">
+                        <div class="form-group">
+                            <input id="cSearchbar" type="text" class="form-control shadow-none" spellcheck="false" placeholder="Search ...." />
+                        </div>
+                    </form>
+                    <p>Tekan ENTER untuk melakukan pencarian.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cAkun py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center">Edit Web Novel</h2>
+                    <hr>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1"><b>Judul Novel</b></label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" value="Saenai Heroine">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1">Cover</label>
+                            <img class="cThumb d-block mb-3" src="img/cover6.jpg">
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1"><b>Sinopsis</b></label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1"
+                                rows="5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam asperiores, dicta enim qui mollitia, possimus quas corporis nulla tenetur ratione. Nihil earum voluptates quia alias dolores accusantium, saepe deleniti ab ut assumenda labore eum tempore. Dicta reprehenderit minus eligendi placeat. Ducimus minus excepturi quia sequi eaque accusantium itaque praesentium vero quidem fuga voluptatem voluptates saepe tenetur nemo exercitationem repellendus, nostrum delectus dolore eveniet, mollitia velit rerum porro vitae, nobis. Recusandae, eius sunt ut natus ex tenetur quae consequatur, praesentium similique fugit accusantium quas ab, unde nam hic ipsam facilis voluptate? Ad vero quis, fugiat eius accusantium autem quaerat voluptatem veniam?</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1"><b>Tema</b></label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" value="Senja tanpa henti">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1"><b>Genre</b></label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Romansa</option>
+                                <option>Komedi</option>
+                                <option>Horor</option>
+                                <option>Aksi</option>
+                                <option>Fantasi</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" name="button" class="btn btn-danger mr-2"><i class="fas fa-check-circle mr-2"></i>Simpan Perubahan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cFooter">
+        <div class="d-flex flex-row justify-content-center">
+            <div class="p-3">
+                <p class="m-0 text-center">Copyright © 2020 <br>Cherryta Kami Hari Itu - Management Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Framework script -->
+    <!-- Jquery -->
+    <script src="vendor/jquery/jquery-3.4.1.min.js"></script>
+    <!-- Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Font awesome script -->
+    <script src="vendor/font-awesome/js/all.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="vendor/owl-carousel/js/owl.carousel.min.js"></script>
+    <!-- My script -->
+    <script>
+        // Navigation and search settings
+        var clickOpen = 0;
+        var clickSearch = 0;
+
+        function openNav() {
+            if (clickOpen % 2 == 0) {
+                document.getElementById("cNavover").style.width = "100%";
+                clickOpen += 1;
+                // console.log(clickOpen);
+            } else {
+                document.getElementById("cNavover").style.width = "0%";
+                clickOpen += 1;
+                // console.log(clickOpen);
+            }
+        }
+
+        function openSearch() {
+            if (clickSearch % 2 == 0) {
+                document.getElementById("cSearch").style.width = "100%";
+                document.getElementById("cSearchbar").focus();
+            } else {
+                document.getElementById("cSearch").style.width = "0%";
+            }
+            clickSearch += 1;
+        }
+
+        function closeNav() {
+            document.getElementById("cNavover").style.width = "0%";
+            clickOpen += 1;
+        }
+
+        function closeSearch() {
+            document.getElementById("cSearch").style.width = "0%";
+            clickSearch += 1;
+        }
+
+        // Owl carousel settings
+        $('.owl-carousel-webnovel').owlCarousel({
+            loop: true,
+            margin: 30,
+            autoplay: true,
+            autoplayTimeout: 1500,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        })
+        $('.owl-carousel-cerpen').owlCarousel({
+            loop: true,
+            margin: 30,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

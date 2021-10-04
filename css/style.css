@@ -1,0 +1,345 @@
+body {
+    font-family: "Quicksand", sans-serif;
+    margin-top: 95px;
+}
+
+nav.navbar {
+    background-color: #eeeeee;
+    padding-left: 100px;
+    padding-right: 100px;
+    transition: all 0.5s ease;
+}
+
+nav.navbar a h1,
+nav #cNavover .cNavhead h1 {
+    font-size: 25px;
+    font-weight: 800;
+    color: #b52025;
+}
+
+nav.navbar a h2,
+nav #cNavover .cNavhead h2 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #393e46;
+}
+
+nav.navbar a img,
+nav #cNavover .cNavhead img {
+    height: 70px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #b52025;
+    margin-right: 15px;
+}
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: #393e46;
+}
+
+nav.navbar button.btn {
+    color: #b52025;
+}
+
+nav.navbar .tambah-karya button.btn {
+    color: white;
+    margin-top: -5px;
+}
+
+nav.navbar button.btn.add {
+    color: white;
+}
+
+nav.navbar ul li.akun a img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%
+}
+
+.cOverlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    background-color: #b52025;
+    overflow-x: hidden;
+    transition: 0.2s;
+}
+
+.cOverlay .cNavhead {
+    background-color: #eeeeee;
+}
+
+.cOverlay button.btn {
+    color: #b52025;
+}
+
+.cNavcont {
+    background-color: #b52025;
+    padding-top: 15px;
+    font-size: 30px;
+}
+
+.cNavcont a,
+.cNavcont button,
+.cNavcont .collapse a {
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.cNavcont a.btn {
+    color: #eeeeee;
+}
+
+.cNavcont button.btn {
+    color: #eeeeee;
+}
+
+.cNavcont button.btn img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.cNavcont .collapse a.btn {
+    color: #b52025;
+}
+
+.cSearch #cSearch .closeSearch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #eeeeee;
+}
+
+.cSearch #cSearch .cForm {
+    position: absolute;
+    width: 70%;
+    top: 250px;
+    right: 15%;
+}
+
+.cSearch #cSearch form input {
+    color: #eeeeee;
+    font-size: 60px;
+    font-weight: 800;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    border-bottom: 3px solid #eeeeee;
+}
+
+.cSearch #cSearch p {
+    font-size: 15px;
+    font-weight: 800;
+    text-align: right;
+    color: #eeeeee;
+}
+
+.jumbotron {
+    margin-top: 77px;
+    background-image: url(../img/banner-cherryta.jpg);
+    box-shadow: inset 0px 0px 600px 60px black;
+}
+
+.cContv1 h2 {
+    font-weight: 700;
+    color: #393e46;
+}
+
+.cContv1 .cTitleup {
+    font-size: 22px;
+    font-weight: 700;
+    color: #393e46;
+    text-decoration: none;
+}
+
+.cContv1 .cTags {
+    font-size: 17px;
+    font-weight: 700;
+    color: #00adb5;
+    text-decoration: none;
+}
+
+.cContv1 h5 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #393e46;
+}
+
+.cContv1 h2 mark {
+    background-color: transparent;
+                font-family: "Alegreya", serif;
+    font-style: italic;
+    color: #00adb5;
+}
+
+.cContv2 {
+    background-color: #f15f70;
+}
+
+.cContv2 a:hover {
+    text-decoration: none;
+}
+
+.cContv2 h5 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #393e46;
+}
+
+.cContv2 h4 {
+    font-weight: 700;
+    color: #eeeeee;
+}
+
+.cContv2 h1 {
+    font-weight: 800;
+    color: #eeeeee;
+}
+
+.cContv2 p,
+.cContv2 ul li {
+    color: #eeeeee;
+    font-size: 14px;
+}
+
+.cContv3 {
+    background-color: #eeeeee;
+}
+
+.cContv3 h5 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #393e46;
+}
+
+.cContv3 h1 {
+    font-weight: 800;
+    color: #b52025;
+}
+
+.cContv3 p {
+    color: #393e46;
+}
+
+.cContv3 a {
+    text-decoration: none;
+    color: #393e46;
+    font-size: 14px;
+}
+
+.cContv3 hr {
+    border-color: #eeeeee;
+}
+
+.cContv3 .carousel-item img {
+    border-radius: 50px;
+}
+
+div.cThumb, div.cPost1 {
+    padding: 20px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.cThumb img, .cPost1-thumb img, img.cThumb {
+    width: 255px;
+    border-radius: 20px;
+}
+
+.cThumb .cFooter {
+    background-color: #f15f70;
+}
+
+.cThumb p.btn {
+    font-size: 10px;
+}
+
+ul li.page-item .page-link {
+    font-weight: 600;
+}
+
+ul li.page-item.active .page-link {
+    background-color: #f15f70;
+}
+
+.cAkun .nav-link.active {
+    background-color: #f15f70;
+    color: white;
+}
+
+.cAkun a {
+    color: #b52025;
+}
+
+.cAkun .nav {
+    border-right: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.cAkun img.cAkun-foto, img.cAkun-foto {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.cFooter {
+    background-color: #f15f70;
+}
+
+.cFooter p {
+    color: #eeeeee;
+}
+
+@media (max-width: 1200px) {
+    .cNavnormal {
+        display: none;
+    }
+
+    .add {
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hamburger {
+        display: none;
+    }
+
+    .add {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .cTopnav .d-flex {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    nav.navbar {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .cSearch #cSearch .cForm {
+        top: 200px;
+    }
+
+    .cSearch #cSearch p {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .cThumb img {
+        width: 154px;
+    }
+}

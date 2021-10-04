@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Judul -->
+    <title>Karyaku - Webnovel | Cherryta - "Cerita yang indah, adalah cerita dari hati"</title>
+
+    <!-- Link framework -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="vendor/owl-carousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/owl-carousel/css/owl.theme.default.min.css">
+
+    <!-- Link css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Link font -->
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="vendor/font-awesome/css/all.min.css" />
+    <!-- Quicksand -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon-cherryta.png" />
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <!-- Navbar Normal -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
+        <a class="navbar-brand" href="index.html">
+            <div class="d-flex flex-row">
+                <div class="mr-2">
+                    <img class="p-0 m-0" src="img/logo-cherryta.png" alt="logo cherryta" />
+                </div>
+            </div>
+        </a>
+        <div class="cNavnormal ml-auto">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="webnovel.html">Web Novel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cerpen.html">Cerpen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="puisi.html">Puisi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pantun.html">Pantun</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item tambah-karya">
+                    <!-- <a class="nav-link" href="#">
+                        <button class="btn btn-danger">
+                            <i class="fas fa-plus-circle mr-2"></i>Tambah Karya
+                        </button>
+                    </a> -->
+                    <div class="dropdown show mt-1">
+                        <a class="btn btn-danger dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-plus-circle mr-2"></i>Tambah Karya
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="tambah-novel.html">Novel</a>
+                            <a class="dropdown-item" href="tambah-nonnovel.html">Non Novel</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown akun ml-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="mr-2" src="img/pp1.jpg">
+                        Fusuyu Fuyusu
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="profil.html">
+                            <i class="fas fa-user-circle mr-2"></i>Profil
+                        </a>
+                        <a class="dropdown-item" href="karyaku.html">
+                            <i class="fas fa-book mr-2"></i>Karyaku
+                        </a>
+                        <a class="dropdown-item" href="akun.html">
+                            <i class="fas fa-user-cog mr-2"></i>Akun
+                        </a>
+                        <a class="dropdown-item" href="logout.html">
+                            <i class="fas fa-sign-out-alt mr-2"></i>Keluar
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="dropdown show ml-auto add">
+            <a class="btn btn-danger dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-plus-circle"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="tambah-novel.html">Novel</a>
+                <a class="dropdown-item" href="tambah-nonnovel.html">Non Novel</a>
+            </div>
+        </div>
+        <button class="btn search" onclick="openSearch()">
+            <i class="fas fa-search"></i>
+        </button>
+        <button class="btn hamburger" onclick="openNav()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Navbar Overlay -->
+    <nav>
+        <div id="cNavover" class="cOverlay">
+            <div class="cNavhead d-flex flex-row py-3">
+                <div class="px-3">
+                    <img class="p-0 m-0" src="img/logo-cherryta.png" alt="logo cherryta" />
+                </div>
+                <div class="ml-auto align-self-center px-3">
+                    <button class="btn close" onclick="closeNav()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="cNavcont">
+                <a class="btn" href="index.html">Beranda</a>
+                <a class="btn" href="webnovel.html">Web Novel</a>
+                <a class="btn" href="cerpen.html">Cerpen</a>
+                <a class="btn" href="puisi.html">Puisi</a>
+                <a class="btn" href="pantun.html">Pantun</a>
+                <a class="btn" href="login.html">Login</a>
+                <button class="btn dropdown-toggle shadow-none mt-1" type="button" data-toggle="collapse" data-target="#collapseone" aria-expanded="false" aria-controls="collapseExample"><img class="mr-2" src="img/pp1.jpg">Fusuyu Fuyusu</button>
+                <div class="collapse" id="collapseone" data-parent=".cNavcont">
+                    <div class="card card-body">
+                        <a class="btn" href="profil.html">
+                            <i class="fas fa-user-circle mr-2"></i>Profil
+                        </a>
+                        <a class="btn" href="karyaku">
+                            <i class="fas fa-book mr-2"></i>Karyaku
+                        </a>
+                        <a class="btn" href="akun.html">
+                            <i class="fas fa-user-cog mr-2"></i>Akun
+                        </a>
+                        <a class="btn" href="logout.html">
+                            <i class="fas fa-sign-out-alt mr-2"></i>Keluar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search -->
+    <section class="cSearch">
+        <div id="cSearch" class="cOverlay">
+            <div class="position-relative">
+                <button class="btn closeSearch" onclick="closeSearch()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="cForm">
+                    <form action="">
+                        <div class="form-group">
+                            <input id="cSearchbar" type="text" class="form-control shadow-none" spellcheck="false" placeholder="Search ...." />
+                        </div>
+                    </form>
+                    <p>Tekan ENTER untuk melakukan pencarian.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cContv3 py-4">
+        <div class="container">
+            <div class="row cPost1">
+                <div class="col-12 text-center">
+                    <img src="img/cover7.jpg" class="cThumb mb-3">
+                    <h2>Judul Web Novelnya</h2>
+                    <h4>Chapter 4 - Judul Chapternya</h4>
+                    <hr>
+                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure similique, minima deserunt deleniti commodi nisi, blanditiis natus tenetur, eum quis facilis. Atque quos saepe voluptates, ad sunt distinctio.
+                        Saepe repellendus
+                        quod a repudiandae illum suscipit hic totam unde aut, commodi quis dolores veritatis et nemo esse nihil alias vel ad omnis illo perferendis consequatur natus! Ad in reiciendis fuga eius praesentium vitae illo ea id ducimus
+                        aliquam perspiciatis iure sapiente quisquam atque doloremque officia, delectus obcaecati iusto eos incidunt doloribus tempora labore! Ex rem dolor possimus doloribus maxime libero, quibusdam! Doloribus laudantium reprehenderit
+                        deleniti voluptates nisi, nulla quia optio qui. Repellendus ullam dolore omnis. Nemo illo velit consequatur a aperiam, rerum optio, culpa, itaque quas atque iste aliquam eum iusto tempora repellendus voluptates maxime unde
+                        cumque assumenda officia ipsam vitae exercitationem debitis molestias excepturi. Saepe, totam dolore omnis? Placeat sequi totam ab mollitia consequatur optio, quas sit molestiae maxime iusto. Voluptatibus quisquam similique
+                        illo perferendis, quia vitae expedita vero, deleniti provident, minima ex possimus voluptatem. Accusantium ut reiciendis necessitatibus optio, assumenda minus unde est dicta, ipsum minima dolores vitae, hic molestiae similique
+                        ullam facilis, doloremque nulla sapiente dolor voluptas aliquam non saepe. Pariatur non ut, iusto ipsam quo aliquid culpa tempora maxime quas itaque accusamus architecto provident sed necessitatibus repudiandae doloremque
+                        animi fugit, nesciunt maiores eum in! Tempora beatae sapiente debitis, assumenda velit nam natus mollitia corporis laboriosam! Perferendis laboriosam quasi molestiae veniam consequatur unde. Ducimus, rerum, reiciendis
+                        recusandae cupiditate, quidem obcaecati perferendis ullam natus, consequatur doloremque tempore! Nesciunt dignissimos tenetur, possimus quisquam alias aut ad minima, rerum error excepturi minus modi enim, voluptatem quibusdam!
+                        Sint mollitia ut, explicabo nostrum illo nesciunt corrupti culpa quasi consequuntur dolor consequatur quidem aliquam perspiciatis debitis eum ex nobis, cupiditate quae, accusantium neque nulla? Deleniti sint tempore fuga nihil
+                        nobis. Quo eius vero, placeat fuga? Nostrum harum quia, ex natus obcaecati facilis. Explicabo pariatur, iure, voluptates ipsam sapiente modi est maxime molestias ut incidunt, ipsum iusto molestiae cupiditate reiciendis.
+                        Tenetur id eos perspiciatis omnis laborum, fugit consequatur sapiente, ipsa eum error perferendis amet itaque quidem rerum molestiae veniam! Animi modi impedit, facilis iste sequi dicta, repellat nemo repudiandae maxime
+                        aspernatur earum quos accusantium sed quod officia inventore. Veniam sed, consequuntur aperiam aspernatur iste modi quaerat quisquam fuga eligendi. Dolorum mollitia perferendis totam incidunt ut quis libero, ratione
+                        dignissimos obcaecati inventore, vel expedita sunt animi iste ex in doloremque error, ad aspernatur distinctio corporis magnam dolores, sed. Velit eos cum natus ullam eaque, quas minus accusantium est, ut! Voluptates similique
+                        assumenda, natus repellat magni, nostrum nihil, tempore ducimus repudiandae corporis numquam? Fuga qui in veritatis aliquam vero quaerat optio itaque possimus esse natus accusamus at iste blanditiis atque nobis reiciendis
+                        aperiam, deleniti! Enim illum eum, ut itaque, hic corporis. Porro neque culpa nostrum recusandae perferendis deserunt quia molestias ratione odit, soluta inventore doloremque mollitia magnam illum ut eligendi nisi
+                        exercitationem quasi iusto aspernatur, accusamus dolorem doloribus quo. Laudantium nemo deserunt necessitatibus ducimus ea, magni nulla est. Nemo enim aperiam perferendis repellendus quidem minima consequatur officia.
+                        Repudiandae incidunt inventore ullam, minus vitae accusamus, illo sapiente cupiditate consectetur, atque, reiciendis! Ipsa impedit, illo totam? Veritatis incidunt, nesciunt quidem aut maiores, voluptatibus consequuntur
+                        repellendus, suscipit temporibus numquam, ut veniam provident distinctio voluptate eligendi excepturi ab laboriosam vel recusandae. Nemo omnis quas nesciunt, inventore saepe quam. Saepe vitae perspiciatis cumque consectetur
+                        alias mollitia illo veritatis dolorum quisquam corrupti, impedit voluptas vero dolor assumenda a quis totam at temporibus officia praesentium eligendi. Ut incidunt placeat explicabo necessitatibus! Asperiores fugit enim, ea
+                        perferendis non labore recusandae accusantium maxime aut rem, aliquam obcaecati. Quos nam doloremque aperiam cumque nobis atque quod dignissimos! Consequatur nemo quia eveniet placeat sapiente distinctio ipsam consectetur
+                        nesciunt? Aliquam consequuntur qui repudiandae suscipit laboriosam adipisci placeat earum, eius nesciunt dolore, quos culpa, sequi perferendis optio iure fugiat quas et perspiciatis aut ipsum quisquam exercitationem! Autem
+                        minus odit ut, maiores saepe tempora sequi debitis laudantium totam vero, expedita impedit eligendi officia dolor aliquid quod natus. Sint perferendis dolor doloribus, a, dignissimos repellendus neque deleniti magnam ratione
+                        possimus nobis quas commodi id nihil eaque et asperiores aut assumenda voluptas molestias optio officia cumque, deserunt dolore! Numquam velit minus, expedita fugiat officiis, doloribus natus qui nobis nam nemo laborum. Cum
+                        inventore sint, vel consequatur laudantium harum corporis veniam natus architecto cumque sunt voluptatem alias aperiam qui a, totam. Dolor eum, consequuntur unde! Quae voluptates blanditiis deleniti unde ab in earum tempora.
+                        Nesciunt voluptatem, architecto doloremque explicabo est dolorem minus nobis excepturi debitis minima adipisci, illum atque inventore numquam modi. Sapiente, modi facere qui quas officia, quidem animi amet voluptatibus eveniet
+                        minima, tenetur voluptate illum unde reprehenderit esse fugit magnam ea. Et iusto commodi voluptatum eius mollitia laborum ad molestiae saepe. Commodi fuga, eos voluptatem neque nemo, dolorem modi error atque quis, inventore
+                        consequatur. Modi sequi cum illum aut velit, dolore, soluta molestiae, numquam omnis voluptas esse saepe aperiam, repudiandae pariatur laboriosam sint rerum voluptate recusandae architecto error similique eius! Ea placeat
+                        fugit natus aspernatur, fugiat a incidunt, officia! Quasi laudantium dolor, veniam. Commodi tenetur molestias illum quia eum optio ad, sunt. Ex id, aliquam ipsam necessitatibus cum perspiciatis placeat soluta explicabo velit
+                        omnis vero distinctio officiis a ut minus laudantium impedit. Quia veniam, eligendi atque reprehenderit rerum autem rem fugit enim quam itaque sunt, magnam labore animi voluptatem nostrum repellendus nihil voluptas? At, minus
+                        autem rem similique incidunt illum rerum doloribus eveniet dicta itaque voluptate. Fuga quo, suscipit cum quas adipisci animi voluptate odio aliquam pariatur, expedita voluptatibus magnam provident accusamus! Laboriosam
+                        dignissimos, enim magnam blanditiis pariatur explicabo laborum quis debitis, quasi quam, quod at recusandae est error suscipit nihil earum officia veniam tempore! Officiis, necessitatibus magni provident consequatur ad illum
+                        cum, magnam, harum laboriosam maxime inventore excepturi. Assumenda animi recusandae provident laudantium iusto amet dicta esse placeat odit ipsum quasi, modi quas facilis eaque necessitatibus laborum dolores nemo aperiam
+                        dolor voluptatem obcaecati autem delectus, quis, eos? Soluta saepe distinctio amet consequuntur perspiciatis, corporis minima aliquam recusandae nesciunt, beatae voluptates obcaecati quos magnam quisquam mollitia nulla culpa
+                        porro deserunt placeat itaque!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="cFooter">
+        <div class="d-flex flex-row justify-content-center">
+            <div class="p-3">
+                <p class="m-0 text-center">Copyright © 2020 <br>Cherryta Kami Hari Itu - Management Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Framework script -->
+    <!-- Jquery -->
+    <script src="vendor/jquery/jquery-3.4.1.min.js"></script>
+    <!-- Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Font awesome script -->
+    <script src="vendor/font-awesome/js/all.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="vendor/owl-carousel/js/owl.carousel.min.js"></script>
+    <!-- My script -->
+    <script>
+        // Navigation and search settings
+        var clickOpen = 0;
+        var clickSearch = 0;
+
+        function openNav() {
+            if (clickOpen % 2 == 0) {
+                document.getElementById("cNavover").style.width = "100%";
+                clickOpen += 1;
+                // console.log(clickOpen);
+            } else {
+                document.getElementById("cNavover").style.width = "0%";
+                clickOpen += 1;
+                // console.log(clickOpen);
+            }
+        }
+
+        function openSearch() {
+            if (clickSearch % 2 == 0) {
+                document.getElementById("cSearch").style.width = "100%";
+                document.getElementById("cSearchbar").focus();
+            } else {
+                document.getElementById("cSearch").style.width = "0%";
+            }
+            clickSearch += 1;
+        }
+
+        function closeNav() {
+            document.getElementById("cNavover").style.width = "0%";
+            clickOpen += 1;
+        }
+
+        function closeSearch() {
+            document.getElementById("cSearch").style.width = "0%";
+            clickSearch += 1;
+        }
+
+        // Owl carousel settings
+        $('.owl-carousel-webnovel').owlCarousel({
+            loop: true,
+            margin: 30,
+            autoplay: true,
+            autoplayTimeout: 1500,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        })
+        $('.owl-carousel-cerpen').owlCarousel({
+            loop: true,
+            margin: 30,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
